@@ -56,6 +56,7 @@ public class ChatClientGUI extends JFrame {
 
             add(inputPanel, BorderLayout.SOUTH);
             setVisible(true);
+            messageField.requestFocusInWindow();
 
             // Start a separate thread to listen for server messages
             Thread messageThread = new Thread(this::listenForMessages);
